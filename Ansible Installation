@@ -1,6 +1,30 @@
-#!/bin/bash
-sudo apt update
-sudo apt install software-properties-common -y
+# sudo apt install software-properties-common -y
+
 sudo apt-add-repository ppa:ansible/ansible -y
 sudo apt update
 sudo apt install ansible -y
+ansible --version
+
+ssh-keygen -t rsa
+cd cd /root/.ssh/
+cat id_rsa.pub
+#copy public key from master
+
+
+#paste public key on all Nodes
+sudo -i
+cd /root/.ssh/
+vim authorized_keys
+paste here
+
+# add all Nodes private-ip address into Master hosts file 
+
+cd /etc/ansible
+vim hosts
+
+
+# Now test connectivity by ping command 
+
+vim /etc/ansible/ansible.cfg
+[defaults]
+host_key_checking = False
