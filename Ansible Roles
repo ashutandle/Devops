@@ -1,0 +1,35 @@
+ansible/site.yml
+---
+- hosts: web
+  become: true
+  roles:
+    - docker
+
+
+ansible/roles/docker/tasks/main.yml
+---
+- name: Install Docker
+  apt:
+    name: docker.io
+    state: present
+    update_cache: yes
+
+- name: Start Docker
+  service:
+    name: docker
+    state: started
+    enabled: true
+
+
+ansible/roles/docker/handlers/main.yml
+---
+- name: restart docker
+  service:
+    name: docker
+    state: restarted
+
+
+
+ansible/roles/docker/defaults/main.yml
+---
+docker_package: docker.io
