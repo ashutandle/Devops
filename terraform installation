@@ -1,0 +1,8 @@
+you have aws cli, visual studio, and git bash in your system now Terraform
+download terraform zip file from https://developer.hashicorp.com/terraform/install
+paste that file in c drive and unzip the file 
+
+now adding env variable in the system 
+path : C:\terraform_1.14.8_windows_386
+
+done now check the terraform version on cmd by terraform -version
