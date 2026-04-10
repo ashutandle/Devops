@@ -1,8 +1,30 @@
-you have aws cli, visual studio, and git bash in your system now Terraform
-download terraform zip file from https://developer.hashicorp.com/terraform/install
-paste that file in c drive and unzip the file 
+# Terraform Installation on Windows
 
-now adding env variable in the system 
-path : C:\terraform_1.14.8_windows_386
+## Prerequisites
+- AWS CLI installed
+- Visual Studio installed
+- Git Bash installed
 
-done now check the terraform version on cmd by terraform -version
+## Steps
+
+1. **Download Terraform**
+   - Go to [Terraform Install Page](https://developer.hashicorp.com/terraform/install).
+   - Download the Windows ZIP file.
+
+2. **Extract Terraform**
+   - Move the downloaded ZIP file to `C:\`.
+   - Unzip the file.
+
+3. **Set Environment Variable**
+   - Add the following path to your system environment variables:
+     ```
+     C:\terraform_1.14.8_windows_386
+     ```
+
+4. **Verify Installation**
+   - Open **Command Prompt**.
+   - Run:
+     ```
+     terraform -version
+     ```
+   - You should see the installed Terraform version displayed.
